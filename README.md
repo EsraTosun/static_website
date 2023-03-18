@@ -1,0 +1,1 @@
+# STATİC WEBSİTESİ GELİŞTİRME
