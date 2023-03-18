@@ -1,0 +1,151 @@
+@font-face {
+    font-family: inter-regular;
+    src: url("../fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: inter-light;
+    src: url("../fonts/Inter-Light.ttf");
+}
+
+@font-face {
+    font-family: inter-SemiBold;
+    src: url("../fonts/Inter-SemiBold.ttf");
+}
+
+/* indirdiğimiz kendi fontumuzu yukarıdaki gibi ekleriz
+   ve isim veriririz. Aşağıada verdiğimiz isimleri yazarak kullanmış oluruz */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    background-color: #e3e3e3;
+    font-family: inter-regular; 
+    height: 100%;
+    width: 100%;
+}
+
+.header-table {   /* bu divi oluşturmamızın nedini taşma olmasını engelleme */
+    width: 100%;
+    display: table;
+}
+
+.header-table-cell {
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    display: table-cell;
+}
+
+.header-container{
+    flex-direction: row;  /* içinde yatayda sıralama yapar */
+    justify-content: space-between;  /* içindekilerin yatayda kenarlara gitmesini sağlar */
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+.header-content-container {
+    flex-direction: row;
+    align-items: center;  /* içindek,leri ortalammaızı sağlar */
+    display: flex;
+    user-select: none; /* seçilememesini salarız */
+    gap: 10px;  /* içindeki nesneler arası boşluk ayarlar */ 
+}
+
+.click-event:hover {  /* ÜSTÜNE GELDİĞİNDE OLACAKLAR */
+    cursor: pointer; /* tıklanabilir yapıyor */
+    opacity: 0.75;
+    user-select: none;
+}
+
+.click-event:active {  /* TIKLANDIĞINDA OLACAKLAR */
+    transform: translateY(2px);  /* y ekseninde aşağı kaymasını sağlar */
+    transition: transform 0.1s;
+    user-select: none;
+}
+
+button {
+    background-color: #FF001F;
+    border: 2px solid #FF001F;
+    font-family: inter-semibold;
+    border-radius: 50px;
+    padding: 12px 60px;
+    user-select: none;
+    font-size: 16px;
+    color: white;
+}
+
+button:hover {
+    user-select: none;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+button:active {
+    transform: translateY(2px);
+    transition: transform 0.1s;
+    user-select: none;
+}
+
+button.filled {
+    background-color: #FF001F;
+    color: white;
+}
+
+button.outline {
+    background-color: transparent;
+    border: 2px solid #FF001F;
+    color: #FF001F;
+}
+
+button.ghost {
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: #FF001F;
+}
+
+.header-logo {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+
+.header-content {
+    flex-direction: column;  /* içindekileri alt alta almamızı sağlar */
+    display: flex;
+    gap: 4px;
+}
+
+.header-content span:nth-child(1) { 
+    font-family: inter-SemiBold; 
+    color: #FF001F;
+    font-size: 22px;
+}
+
+.header-content span:nth-child(2) { 
+    font-family: inter-regular; 
+    color: #2E2E2E;
+    font-size: 18px;
+}
+
+/* nth-child(x) => .header-content içindeki x. spana şu özelliği ver demek
+   x: 1'den başlar */
+
+a {
+    text-decoration: none;  /* altındaki çizgileri siler */
+    color: #232323;
+}   
+
+a:hover {
+    text-decoration: none;
+    color: #FF001F
+}
+
+.nav-container {
+    display: flex;
+    gap: 20px;
+}
