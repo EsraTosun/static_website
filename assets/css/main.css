@@ -44,13 +44,14 @@ html, body{
     flex-direction: row;  /* içinde yatayda sıralama yapar */
     justify-content: space-between;  /* içindekilerin yatayda kenarlara gitmesini sağlar */
     align-items: center;
+    user-select: none;
     width: 100%;
     display: flex;
 }
 
 .header-content-container {
     flex-direction: row;
-    align-items: center;  /* içindek,leri ortalammaızı sağlar */
+    align-items: center;  /* içindekileri ortalammaızı sağlar */
     display: flex;
     user-select: none; /* seçilememesini salarız */
     gap: 10px;  /* içindeki nesneler arası boşluk ayarlar */ 
@@ -148,4 +149,123 @@ a:hover {
 .nav-container {
     display: flex;
     gap: 20px;
+}
+
+.section-title {
+    font-family: inter-bold;
+    margin-bottom: 40px;
+    color: #212121;
+    font-size: 34px;
+}
+
+.section-container {
+    justify-content: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    display: flex;
+    padding: 40px;
+    height: 75%;
+    width: 100%;
+}
+
+.section-content-container {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 90%;
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .section-container {
+        height: "auto"
+    }
+
+    .section-content-container {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.text-input-container {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+.text-input-container label {
+    font-family: inter-semibold;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+}
+
+.text-input-container input {
+    font-family: inter-regular;
+    border: 2px solid white;
+    font-size: 18px;
+    border-radius: 10px;
+    outline: none;
+    padding: 20px;
+    width: 100%;
+}
+
+.text-input-container input:focus {
+    border: 2px solid #FF001F;
+    outline: none;
+}
+
+.multi-text-input-container {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+.multi-text-input-container label {
+    font-family: inter-semibold;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+}
+
+.multi-text-input-container textarea {
+    font-family: inter-regular;
+    border: 2px solid white;
+    border-radius: 10px;
+    min-height: 150px;
+    resize: vertical;
+    font-size: 18px;
+    outline: none;
+    padding: 20px;
+    width: 100%;
+}
+
+.multi-text-input-container textarea:focus {
+    border: 2px solid #FF001F;
+    outline: none;
+}
+
+.footer-container {         /* bütün sayfalarda olacağı için buraya kaydettik */
+    justify-content: space-between;
+    background-color: white;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 30px;
+    user-select: none;
+    display: flex;
+    width: 100%;
+}
+
+.footer-logo {
+    height: 50px;
 }
